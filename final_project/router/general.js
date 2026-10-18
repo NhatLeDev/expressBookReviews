@@ -91,6 +91,7 @@ public_users.get("/async/books", async (req, res) => {
       .json({ message: "Error fetching book list", error: error.message });
   }
 });
+// Task 11: Get book details based on ISBN – using async/await with Axios
 public_users.get("/async/isbn/:isbn", async (req, res) => {
   try {
     const isbn = req.params.isbn;
@@ -104,6 +105,7 @@ public_users.get("/async/isbn/:isbn", async (req, res) => {
       .json(error.response?.data || { message: error.message });
   }
 });
+// Task 12: Get book details based on author – using async/await with Axios
 public_users.get("/async/author/:author", async (req, res) => {
   try {
     const author = req.params.author;
@@ -117,6 +119,7 @@ public_users.get("/async/author/:author", async (req, res) => {
       .json(error.response?.data || { message: error.message });
   }
 });
+// Task 13: Get book details based on title – using async/await with Axios
 public_users.get("/async/title/:title", async (req, res) => {
   try {
     const title = req.params.title;
